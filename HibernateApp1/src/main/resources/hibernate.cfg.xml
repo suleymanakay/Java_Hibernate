@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+        <!--Postgresql-last-version-->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <!-- For performance reasons changed to MyISAM from org.hibernate.dialect.PostgresqlDialect -->
+        <!-- Database Settings -->
+        <property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">12345</property>
+
+        <!-- Properties -->
+
+        <property name="connection.autocommit">true</property>
+
+        <property name="hbm2ddl.auto">validate</property>
+
+        <property name="showsql">true</property>
+        <!--<mapping class="domain.Pojo" ></mapping>-->
+        <!---mapping class="Domain.Pojo"></mapping-->
+
+    </session-factory>
+
+</hibernate-configuration>
